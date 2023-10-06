@@ -41,7 +41,7 @@
     }
   ],
   "transform": [
-    {"filter": "datum.mniimum_nights > 0"},
+    {"filter": "datum.minimum_nights > 0"},
     {"filter": "datum.price > 0"},
     {"filter": "datum.number_of_reviews > Number_Reviews"},
     {"filter": "Room_Type == null || datum.room_type == Room_Type"}
