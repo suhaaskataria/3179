@@ -115,7 +115,7 @@
         "dx": -12,
         "fontSize": 11.5,
         "fontStyle": "italic"
-      },
+      } //,
       // "encoding": {
       //   "text": {"field": "room_type", "type": "nominal"},
       //   "color": {"value": "black"},
