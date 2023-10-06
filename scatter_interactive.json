@@ -44,7 +44,7 @@
     {"filter": "datum.minimum_nights > 0"},
     {"filter": "datum.price > 0"},
     {"filter": "datum.number_of_reviews > Number_Reviews"},
-    {"filter": {"field": "price", "range": [0,10000]}},
+    {"filter": {"field": "price", "range": [0,1000]}},
     {"filter": {"field": "minimum_nights", "range": [0,20]}},
     {
       "filter": "Room_Type == null || datum.room_type == Room_Type"
