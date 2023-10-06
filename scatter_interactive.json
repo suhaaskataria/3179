@@ -115,25 +115,7 @@
         "dx": -12,
         "fontSize": 11.5,
         "fontStyle": "italic"
-      } //,
-      // "encoding": {
-      //   "text": {"field": "room_type", "type": "nominal"},
-      //   "color": {"value": "black"},
-      //   "opacity": {
-      //     "condition": {
-      //       "test": "datum['room_type'] == 'Private room' || datum['room_type'] == 'Shared room'",
-      //       "value": 1
-      //     },
-      //     "value": 0
-      //   },
-      //   "tooltip": [
-      //     {"field": "room_type", "type": "nominal"},
-      //     {"field": "price", "type": "quantitative", "format": ","},
-      //     {"field": "minimum_nights", "type": "quantitative", "format": ","},
-      //     {"field": "number_of_reviews", "type": "quantitative", "format": ","},
-      //     {"field": "host_name", "type": "nominal", "format": ","}
-      //   ]
-      // }
+      }
     }
   ]
 }
