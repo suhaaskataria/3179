@@ -4,7 +4,7 @@
   "height": 600,
   "title": "AirBnB Listings Victoria",
   "data": {
-    "url": "listings.csv"
+    "url": "https://raw.githubusercontent.com/suhaaskataria/3179/main/listings.csv"
   },
   "params": [
     {
