@@ -1,0 +1,128 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 600,
+  "title": "AirBnB Listings Victoria",
+  "data": {
+    "url": "https://raw.githubusercontent.com/suhaaskataria/3179/main/listings.csv"
+  },
+  "params": [
+    {
+      "name": "Number_Reviews",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 500,
+        "step": 10,
+        "name": "Minimum Reviews: "
+      }
+    },
+    {
+      "name": "Room_Type",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Private room",
+          "Shared room",
+          "Hotel room",
+          "Entire home/apt"
+        ],
+        "labels": [
+          "Show All",
+          "Private room",
+          "Shared room",
+          "Hotel room",
+          "Entire home/apt"
+        ],
+        "name": "Room Selection: "
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.mniimum_nights > 0"},
+    {"filter": "datum.price > 0"},
+    {"filter": "datum.number_of_reviews > Number_Reviews"},
+    {"filter": "Room_Type == null || datum.room_type == Room_Type"}
+  ],
+  "encoding": {
+    "x": {
+      "field": "price",
+      "type": "quantitative",
+      "title": "Price of AirBnb",
+      "axis": {"tickCount": 10},
+      "scale": {"domain": [1, 1000]}
+    },
+    "y": {
+      "field": "minimum_nights",
+      "title": "Minimum Night Stay",
+      "type": "quantitative",
+      "axis": {"tickCount": 10},
+      "scale": {"domain": [1, 20]}
+    }
+  },
+  "layer": [
+    {
+      "mark": "circle",
+      "encoding": {
+        "size": {
+          "field": "number_of_reviews",
+          "type": "quantitative",
+          "scale": {"type": "threshold", "domain": [20, 50, 100, 250, 500]},
+          "legend": {"format": ".1s"}
+        },
+        "color": {
+          "field": "room_type",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Private room",
+              "Shared room",
+              "Hotel room",
+              "Entire home/apt"
+            ],
+            "range": ["#e41a1c", "#984ea3", "#ff7f00", "#a6cee3"]
+          }
+        },
+        "opacity": {"value": 0.8},
+        "tooltip": [
+          {"field": "room_type", "type": "nominal"},
+          {"field": "price", "type": "quantitative", "format": ","},
+          {"field": "minimum_nights", "type": "quantitative", "format": ","},
+          {"field": "number_of_reviews", "type": "quantitative", "format": ","},
+          {"field": "host_name", "type": "nominal", "format": ","}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -12,
+        "fontSize": 11.5,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": {"field": "room_type", "type": "nominal"},
+        "color": {"value": "black"},
+        "opacity": {
+          "condition": {
+            "test": "datum['room_type'] == 'Private room' || datum['room_type'] == 'Shared room'",
+            "value": 1
+          },
+          "value": 0
+        },
+        "tooltip": [
+          {"field": "room_type", "type": "nominal"},
+          {"field": "price", "type": "quantitative", "format": ","},
+          {"field": "minimum_nights", "type": "quantitative", "format": ","},
+          {"field": "number_of_reviews", "type": "quantitative", "format": ","},
+          {"field": "host_name", "type": "nominal", "format": ","}
+        ]
+      }
+    }
+  ],
+  "config": {}
+}
