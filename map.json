@@ -67,7 +67,7 @@
                 },
                 {"filter": "datum.ranking == 1"},
                 {
-                  "calculate": "'The most expensive apartment is : $' + datum['price']",
+                  "calculate": "'The most expensive AirBNB is $' + datum['price']",
                   "as": "text_annotation_raw"
                 },
                 {
