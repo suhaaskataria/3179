@@ -102,8 +102,7 @@
           {"field": "room_type", "type": "nominal"},
           {"field": "price", "type": "quantitative", "format": ","},
           {"field": "minimum_nights", "type": "quantitative", "format": ","},
-          {"field": "number_of_reviews", "type": "quantitative", "format": ","},
-          {"field": "host_name", "type": "nominal", "format": ","}
+          {"field": "number_of_reviews", "type": "quantitative", "format": ","}
         ]
       }
     },
