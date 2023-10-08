@@ -77,9 +77,9 @@
               ],
               "mark": {
                 "type": "text",
-                "align": "right",
-                "dx": -8,
-                "dy": -8,
+                "align": "left",
+                "dx": -75,
+                "dy": -150,
                 "baseline": "middle",
                 "fontStyle": "italic"
               },
