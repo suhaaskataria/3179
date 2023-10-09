@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "AirBNBs in Melbourne",
-  "width": 600,
+  "width": "container",
   "height": 500,
   "params": [
     {
