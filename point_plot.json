@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Distribution of Body Mass of Penguins",
+  "title": "Average Price of AirBNB by Room Type and Neighbourhood",
   "width": "container",
   "height": 300,
   "data": {
