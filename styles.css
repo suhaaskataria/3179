@@ -28,3 +28,9 @@
     /*height: 1000px;
 	width: 800px;*/
 }
+
+#plot_point {
+    	top: 100px;
+    	bottom: 100px;
+	width: 100%;
+}
