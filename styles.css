@@ -1,9 +1,24 @@
-﻿#density_map {
+#left_wrapper {
+	width: 15%;
+	display: inline-block;
+}
+
+#mid_wrapper {
+	width: 70%;
+	display: inline-block;
+}
+
+#right_wrapper {
+	width: 15%;
+	display: inline-block;
+}
+
+#density_map {
     top: 100px;
     bottom: 100px;
     left: 100px;
     right: 100px;
-    display: inline-block;
+    display: block;
     /* height: 500px;
     width: 600px; */
 }
