@@ -1,0 +1,38 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Average Price of AirBNB by Room Type and Neighbourhood",
+  "width": "container",
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/suhaaskataria/3179/main/listings.csv"
+  },
+  "mark": "bar",
+  "transform": [{"groupby": ["neighbourhood"]}],
+  "encoding": {
+    "x": {
+      "field": "neighbourhood",
+      "type": "nominal",
+      "sort": {"encoding": "x"},
+      "title": "Neighbourhood",
+      "axis": {"grid": true, "tickBand": "extent"}
+    },
+    "y": {
+      "field": "price",
+      "aggregate": "average",
+      "type": "quantitative",
+      "scale": {"domain": [0, 1500]},
+      "axis": {"grid": true, "tickBand": "extent"}
+    },
+    "color": {"field": "room_type", "type": "nominal"},
+    "tooltip": [
+      {"field": "neighbourhood", "type": "nominal"},
+      {"field": "room_type", "type": "nominal", "title": "room type"},
+      {
+        "field": "price",
+        "aggregate": "average",
+        "type": "quantitative",
+        "title": "avg-price"
+      }
+    ]
+  }
+}
