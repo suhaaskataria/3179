@@ -1,3 +1,6 @@
+body {
+	width: 100%;
+}
 #left_wrapper {
 	width: 15%;
 	display: inline-block;
