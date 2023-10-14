@@ -1,0 +1,37 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Two horizonally concatenated charts that show a histogram of precipitation in Seattle and the relationship between min and max temperature.",
+  "data": {"url": "https://raw.githubusercontent.com/suhaaskataria/3179/main/complete.csv"},
+  "transform": [{"filter": {"field": "gender", "oneOf": ["male", "female"]} }],
+  "title": "Nobel Prize Winners by Gender",
+  "hconcat": [
+        {
+      "mark": {"type": "arc", "tooltip": true},
+      "encoding": {
+        "theta": { "aggregate": "count", "field": "gender", "stack": "normalize"},
+        "color": {"field": "gender", "type": "nominal"}
+      }
+    },
+    {
+      "mark": "area",
+      "encoding": 
+      {
+        "x": {
+          "timeUnit": "year", "field": "awardYear",
+          "axis": {"format": "%Y"}
+        },
+        "y": {
+          "aggregate": "count", "field": "gender", "stack": null
+        },
+        "color": {
+          "field": "gender",
+          "scale": {"scheme": "set1"}
+        },
+        "tooltip": [
+          {"field": "gender", "type": "nominal"},
+          {"field": "__count", "type": "quantitative"}
+        ]
+      }
+    }
+  ]
+}
