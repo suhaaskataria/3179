@@ -1,3 +1,7 @@
+body {
+	background-color: lightblue;
+}
+
 div {
 	position: unset;
 }
@@ -15,6 +19,7 @@ div {
 #mid_wrapper {
 	width: 70%;
 	display: inline-block;
+	background-color: transparent;
 }
 
 #right_wrapper {
