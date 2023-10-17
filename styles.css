@@ -21,6 +21,14 @@
 	width: 100%;
 	display: block;
 	top: 100px;
+	text-align: center;
+}
+
+#all_cover {
+	width: 100%;
+	display: block;
+	top: 100px;
+	bottom: 100px;
 }
 
 .left_plot {
