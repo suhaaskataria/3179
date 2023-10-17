@@ -17,8 +17,21 @@
     <div id="left_wrapper"></div>
 
     <div id="mid_wrapper">
-        <div id="density_map"></div>
+        
+        <div id="density_map" class="left_plot"></div>
+        <div id="right_caption">
+            <p>Lorem ipsum</p>
+        </div>
+        
         <div id="scatter_plot"></div>
+        <div id="title">
+            <h2>Let's discover the categories</h2>
+        </div>
+
+        <div id="plot_category" class="left_plot"></div>
+        <div id="right_caption">
+            <p>Lorem ipsum</p>
+        </div>
         
     </div>
 
@@ -53,6 +66,11 @@
 
         var spec4 = "bar_plot.json";
       vegaEmbed('#plot_bar', spec4).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
+
+        var spec5 = "category_plot.json";
+      vegaEmbed('#plot_category', spec5).then(function(result) {
         // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
       }).catch(console.error);
         
