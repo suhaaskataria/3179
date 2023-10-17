@@ -63,9 +63,21 @@ div {
 	float: right;
 }
 
+#right_caption1 {
+	display: inline-block;
+	width: 25%;
+	float: right;
+}
+
 #left_caption {
 	display: inline-block;
 	width: 30%;
+	float: left;
+}
+
+#left_caption1 {
+	display: inline-block;
+	width: 39%;
 	float: left;
 }
 
