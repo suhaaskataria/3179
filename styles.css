@@ -2,6 +2,10 @@ body {
 	background-color: lightblue;
 }
 
+div {
+	position: unset;
+}
+
 #spacer {
 	width: 100%;
 	height: 50px;
