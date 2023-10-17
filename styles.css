@@ -20,6 +20,7 @@
 #sub_title {
 	width: 100%;
 	display: block;
+	top: 100px;
 }
 
 .left_plot {
