@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
-  "height": "container",
+  "height": 300,
   "description": "A horizontal box plot showing median and lower and upper quartiles of the distribution of body mass of penguins.",
   "data": {"url": "https://raw.githubusercontent.com/suhaaskataria/3179/main/complete.csv"},
   "mark": {"type": "boxplot",
