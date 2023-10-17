@@ -32,7 +32,7 @@
     },
     {
       "mark": "area",
-      "width": 200,
+      "width": "container",
       "encoding": {
         "x": {
           "timeUnit": "year",
