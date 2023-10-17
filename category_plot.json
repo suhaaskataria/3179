@@ -34,7 +34,8 @@
       "x": {
         "aggregate": "count",
         "field": "category",
-        "title": "Number of Awards"
+        "title": "Number of Awards",
+        "scale": {"domain": [0, 220]}
       }
     }
   }, {
