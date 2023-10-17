@@ -10,7 +10,6 @@
     "y": {"field": "category", "type": "nominal"},
     "x": {
       "field": "age",
-      "aggregate": "average",
       "type": "quantitative"
     }
   }
