@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": "container",
+  "data": {"url": "https://raw.githubusercontent.com/suhaaskataria/3179/main/complete.csv"},
+  "params": [
+   {
+      "name": "Year_Above",
+      "value": 2000,
+      "bind": {
+        "input": "range",
+        "min": 1905,
+        "max": 2020,
+        "step": 5,
+        "name": "Before the year: "
+      }
+   } 
+  ],
+  "transform": [
+    {
+      "filter": "datum.awardYear < Year_Above"
+    }
+  ],
+  "encoding": {
+    "y": {
+      "field": "category",
+      "type": "nominal",
+      "axis": null
+    }
+  },
+  "layer": [{
+    "mark": {"type": "bar", "tooltip": true},
+    "encoding": {
+      "x": {
+        "aggregate": "count",
+        "field": "category",
+        "title": "Number of Awards"
+      }
+    }
+  }, {
+    "mark": {"type": "text", "align": "left", "x": 5, "color": "white"},
+    "encoding": {
+      "text": {"field": "category"},
+      "detail": {"aggregate": "count"}
+    }
+  }]
+}
