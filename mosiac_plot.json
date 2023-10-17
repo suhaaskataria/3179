@@ -135,7 +135,7 @@
   ],
   "vconcat": [
     {
-      "width": 1200,
+      "width": "container",
       "height": 20,
       "mark": {
         "type": "text",
