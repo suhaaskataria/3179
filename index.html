@@ -35,6 +35,21 @@
         <div id="right_caption">
             <p>Lorem ipsum</p>
         </div>
+
+        <div id="left_caption">
+            <p>Lorem ipsum</p>
+        </div>
+        <div id="plot_salary" class="right_plot"></div>
+
+        <div id="left_caption">
+            <p>Lorem ipsum</p>
+        </div>
+        <div id="plot_age" class="right_plot"></div>
+
+        <div id="plot_point" class="left_plot"></div>
+        <div id="right_caption">
+            <p>Lorem ipsum</p>
+        </div>
         
     </div>
 
@@ -42,7 +57,7 @@
 
      <div id="spacer"></div>
 
-    <div id="plot_point"></div>
+    
         <div id="text_avg_price">
             <p>
                 It can be seen that an entire home/apt room type is by far the most expensive for nearly all neighbourhoods.
@@ -76,7 +91,16 @@
       vegaEmbed('#plot_category', spec5).then(function(result) {
         // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
       }).catch(console.error);
-        
+
+        var spec6 = "salary_dot.json";
+      vegaEmbed('#plot_salary', spec6).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
+
+        var spec7 = "age_boxplot.json";
+      vegaEmbed('#plot_age', spec7).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
     </script>
 
 </body>
