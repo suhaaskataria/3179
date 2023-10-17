@@ -17,12 +17,23 @@
 	display: inline-block;
 }
 
-#density_map {
+#sub_title {
+	width: 100%;
+	display: block;
+}
+
+.left_plot {
     	top: 100px;
     	bottom: 100px;
-	width: 100%;
+	width: 70%;
+	display: inline-block;
     /* height: 500px;
     width: 600px; */
+}
+
+#right_caption {
+	display: inline-block;
+	width: 30%;
 }
 
 #scatter_plot {
