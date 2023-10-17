@@ -21,6 +21,10 @@ body {
 	display: inline-block;
 }
 
+.vega-embed {
+    position: unset;
+}
+
 #sub_title {
 	width: 100%;
 	display: block;
