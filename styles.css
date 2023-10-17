@@ -22,20 +22,13 @@
 	display: block;
 	top: 100px;
 	text-align: center;
-}
-
-#all_cover {
-	width: 100%;
-	display: block;
-	top: 100px;
-	bottom: 100px;
+	position: relative;
 }
 
 .left_plot {
     	top: 100px;
     	bottom: 100px;
 	width: 70%;
-	display: inline-block;
     /* height: 500px;
     width: 600px; */
 }
