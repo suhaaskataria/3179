@@ -38,7 +38,7 @@ body {
     width: 600px; */
 }
 
-.left_plot {
+.right_plot {
     	top: 100px;
     	bottom: 100px;
 	width: 70%;
@@ -52,6 +52,12 @@ body {
 	display: inline-block;
 	width: 30%;
 	float: right;
+}
+
+#left_caption {
+	display: inline-block;
+	width: 30%;
+	float: left;
 }
 
 #scatter_plot {
